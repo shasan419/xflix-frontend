@@ -419,6 +419,7 @@ handleSearchInput = async(evt) => {
     if(x.title.toLowerCase().includes(value.toLowerCase())){
       return x
     }
+    return false
   })
   if (this.state.searchText.length === 0) { filteredVideos = this.state.allVideoList }
 
@@ -524,7 +525,7 @@ handleContentRatingChange = async (contentRating) => {
 getFilteredVideosByGenre = (videos, genres) => {
   let filteredVideos = [];
 
-  genres.map((genre) => {
+  genres.forEach((genre) => {
     if (genre === "all") {
       filteredVideos = videos;
       return filteredVideos;
@@ -540,7 +541,7 @@ getFilteredVideosByGenre = (videos, genres) => {
 getFilteredVideosByContentRating = (videos, contentRatings) => {
   let filteredVideos = [];
 
-  contentRatings.map((contentRating) => {
+  contentRatings.forEach((contentRating) => {
     if (contentRatings === "anyone") {
       filteredVideos = videos;
       return filteredVideos;
