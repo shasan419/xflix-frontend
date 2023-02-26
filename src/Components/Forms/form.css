@@ -1,0 +1,15 @@
+#upload-btn-release-date::placeholder {
+    color: transparent;
+  }
+  .dialog {
+    padding: 40px;
+    max-width: 500px;
+  }
+  
+  .form-element {
+    width: 100%;
+  }
+  .error-msg {
+    margin: 10px 0px;
+  }
+  
